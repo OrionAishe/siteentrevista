@@ -25,6 +25,10 @@ nav{
     height: 40px;
 }
 
+nav p{
+    padding-left: 10px;
+}
+
 header{
     grid-area: header;
     display: flex;
