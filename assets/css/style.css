@@ -39,7 +39,6 @@ header{
 
 header > ul{
     display: flex;
-    color: gray;
     list-style: none;
 }
 
@@ -50,6 +49,11 @@ header li{
 header > img{
     width: 200px;
     height: 50px;
+}
+
+header a{
+    text-decoration: none;
+    color: gray;
 }
 
 .slider{
@@ -131,7 +135,6 @@ aside > img{
 footer{
     grid-area: footer;
     background-color: #4d4d4d;
-    color: darkgray;
     display: flex;
     justify-content: center;
     height: 100px;
@@ -142,4 +145,45 @@ footer ul{
     display: flex;
     list-style: none;
     justify-content: space-around;
+}
+
+footer a{
+    color: darkgray;
+    text-decoration: none;
+}
+
+@media(max-width:768px){
+    main{
+        display: grid;
+        grid-template-areas: "nav nav" "header header" "section section" "aside aside" "imagem imagem" "footer footer";
+    }
+
+    header{
+        justify-content: center;
+    }
+
+    header > img{
+        display: none;
+    }
+
+    .slider-container{
+        display: none;
+    }
+
+    aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagens{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagens > div{
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
